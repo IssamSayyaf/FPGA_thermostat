@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../TEMPMUX.vhd" \
+"../../../../../T_TEMPMUX_tb.vhd" \
+
+# Do not sort compile order
+nosort

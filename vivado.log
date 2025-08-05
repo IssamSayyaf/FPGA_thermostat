@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Aug  5 13:48:25 2025
+# Process ID: 26092
+# Current directory: /home/issam/FPGA/tempmux/TEMPMUX
+# Command line: vivado
+# Log file: /home/issam/FPGA/tempmux/TEMPMUX/vivado.log
+# Journal file: /home/issam/FPGA/tempmux/TEMPMUX/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/issam/FPGA/tempmux/TEMPMUX/TEMPMUX.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/issam/FPGA/tempmux/TEMPMUX.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/issam/FPGA/tempmux/T_TEMPMUX_tb.vhd'.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/issam/FPGA/tempmux/TEMPMUX/TEMPMUX.srcs/sources_1'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Aug  5 13:53:33 2025...

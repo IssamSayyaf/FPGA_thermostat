@@ -21,6 +21,18 @@ TEMPMUX is a VHDL-based FPGA project that implements a temperature control syste
 - **Heating Control**: Automatic furnace control based on temperature comparison
 - **Cooling Control**: Automatic AC control based on temperature comparison
 
+### New Enhanced Features
+
+- **Pipelined Architecture**: 2-stage pipeline design for improved timing and performance
+  - Stage 1: Input registration to sample all asynchronous inputs
+  - Stage 2: Logic processing on registered inputs for stable operation
+- **Synchronous Reset**: Complete system reset functionality with proper initialization
+- **Input Stabilization**: All asynchronous inputs are registered to prevent metastability
+- **Improved HVAC Logic**: Enhanced temperature control with proper priority handling
+  - Prevents simultaneous heating and cooling operation
+  - Temperature comparison logic with hysteresis consideration
+- **Robust I/O Handling**: All outputs are properly registered for clean signal transitions
+
 ### Input/Output Signals
 
 - `current_temp[6:0]` - Current temperature reading
@@ -111,21 +123,50 @@ A waveform configuration file (`T_TEMPMUX_tb_behav.wcfg`) is included with:
 
 ## Design Logic
 
+### Architecture Overview
+
+The TEMPMUX module implements a **2-stage pipelined architecture** for optimal performance:
+
+1. **Input Registration Stage**: All asynchronous inputs (temperature sensors, control signals) are sampled and registered on the rising edge of the clock
+2. **Logic Processing Stage**: Temperature comparison, display multiplexing, and HVAC control logic operate on the stable registered inputs
+
+### Control Logic
+
 The TEMPMUX module implements the following control logic:
 
 - **Display Multiplexer**: Selects between current and desired temperature for display
-- **Temperature Comparison**: Continuously compares current vs. desired temperature
-- **Heating Control**: Activates furnace when current < desired temperature
-- **Cooling Control**: Activates AC when current > desired temperature
-- **System Status**: Provides real-time status of HVAC systems
+- **Temperature Comparison**: Continuously compares current vs. desired temperature using registered values
+- **Heating Control**: Activates furnace when (heat='1' AND cool='0' AND current < desired)
+- **Cooling Control**: Activates AC when (cool='1' AND heat='0' AND current > desired)
+- **Safety Logic**: Prevents simultaneous heating and cooling operations
+- **System Status**: Provides real-time status of HVAC systems with registered outputs
+
+### Key Design Improvements
+
+- **Metastability Prevention**: All asynchronous inputs are properly synchronized
+- **Pipeline Efficiency**: 2-clock latency for complete input-to-output processing
+- **Resource Optimization**: Efficient use of FPGA registers and logic resources
+- **Timing Closure**: Improved setup/hold time margins for high-frequency operation
 
 ## Testing
 
 The included testbench (`T_TEMPMUX_tb`) provides comprehensive testing scenarios:
 
-- Temperature range validation
-- Display selection functionality
-- Heating/cooling logic verification
-- Edge case testing
-- System response timing analysis
+### Test Coverage
+
+- **8-Case Truth Table Testing**: Complete verification of all input combinations
+- **Temperature Range Validation**: Testing with various temperature values (2°C to 8°C range)
+- **Display Selection Functionality**: Verification of multiplexer operation
+- **Heating/Cooling Logic Verification**: All HVAC control scenarios tested
+- **Pipeline Timing Analysis**: 2-stage pipeline operation verification
+- **Reset Functionality**: Proper initialization and reset behavior testing
+- **Edge Case Testing**: Boundary conditions and simultaneous signal scenarios
+- **System Response Timing**: 20ns test slots with 100MHz clock (10ns period)
+
+### Testbench Features
+
+- **Comprehensive Stimulus**: 8 distinct test cases covering all logical combinations
+- **Proper Timing**: Each test case runs for 20ns (2 clock cycles) to verify pipeline operation
+- **Clean Reset**: 25ns reset period for proper initialization
+- **Signal Monitoring**: All inputs and outputs monitored for complete verification
 

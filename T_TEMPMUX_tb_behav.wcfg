@@ -11,14 +11,22 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="629001fs"></ZoomEndTime>
-      <Cursor1Time time="100000fs"></Cursor1Time>
+      <ZoomEndTime time="316501fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="276"></NameColumnWidth>
-      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+      <ValueColumnWidth column_width="116"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="16" />
+   <WVObjectSize size="28" />
+   <wvobject type="logic" fp_name="/T_TEMPMUX_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/T_TEMPMUX_tb/rst_n">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
    <wvobject type="array" fp_name="/T_TEMPMUX_tb/current_temp">
       <obj_property name="ElementShortName">current_temp[6:0]</obj_property>
       <obj_property name="ObjectShortName">current_temp[6:0]</obj_property>
@@ -51,6 +59,14 @@
       <obj_property name="ElementShortName">ac_on</obj_property>
       <obj_property name="ObjectShortName">ac_on</obj_property>
    </wvobject>
+   <wvobject type="logic" fp_name="/T_TEMPMUX_tb/UUT/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/T_TEMPMUX_tb/UUT/rst_n">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
    <wvobject type="array" fp_name="/T_TEMPMUX_tb/UUT/current_temp">
       <obj_property name="ElementShortName">current_temp[6:0]</obj_property>
       <obj_property name="ObjectShortName">current_temp[6:0]</obj_property>
@@ -82,5 +98,37 @@
    <wvobject type="logic" fp_name="/T_TEMPMUX_tb/UUT/ac_on">
       <obj_property name="ElementShortName">ac_on</obj_property>
       <obj_property name="ObjectShortName">ac_on</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/T_TEMPMUX_tb/UUT/r_cur">
+      <obj_property name="ElementShortName">r_cur[6:0]</obj_property>
+      <obj_property name="ObjectShortName">r_cur[6:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/T_TEMPMUX_tb/UUT/r_des">
+      <obj_property name="ElementShortName">r_des[6:0]</obj_property>
+      <obj_property name="ObjectShortName">r_des[6:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/T_TEMPMUX_tb/UUT/r_sel">
+      <obj_property name="ElementShortName">r_sel</obj_property>
+      <obj_property name="ObjectShortName">r_sel</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/T_TEMPMUX_tb/UUT/r_cool">
+      <obj_property name="ElementShortName">r_cool</obj_property>
+      <obj_property name="ObjectShortName">r_cool</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/T_TEMPMUX_tb/UUT/r_heat">
+      <obj_property name="ElementShortName">r_heat</obj_property>
+      <obj_property name="ObjectShortName">r_heat</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/T_TEMPMUX_tb/UUT/r_disp">
+      <obj_property name="ElementShortName">r_disp[6:0]</obj_property>
+      <obj_property name="ObjectShortName">r_disp[6:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/T_TEMPMUX_tb/UUT/r_ac">
+      <obj_property name="ElementShortName">r_ac</obj_property>
+      <obj_property name="ObjectShortName">r_ac</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/T_TEMPMUX_tb/UUT/r_fur">
+      <obj_property name="ElementShortName">r_fur</obj_property>
+      <obj_property name="ObjectShortName">r_fur</obj_property>
    </wvobject>
 </wave_config>

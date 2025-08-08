@@ -1,0 +1,49 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/issam/FPGA/project/FPGA_thermostat/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+$(BUILD_DIR)/$(TESTBENCH).compiled	Makefile	/^$(BUILD_DIR)\/$(TESTBENCH).compiled: $(TESTBENCH)$(VHDL_EXT) | $(BUILD_DIR)$/;"	t
+$(BUILD_DIR)/$(TOP_MODULE).compiled	Makefile	/^$(BUILD_DIR)\/$(TOP_MODULE).compiled: $(TOP_MODULE)$(VHDL_EXT) | $(BUILD_DIR)$/;"	t
+BUILD_DIR	Makefile	/^BUILD_DIR = build      # Directory for build artifacts$/;"	m
+LOG_DIR	Makefile	/^LOG_DIR = logs         # Directory for log files$/;"	m
+LOG_EXT	Makefile	/^LOG_EXT = .log$/;"	m
+PROJECT_NAME	Makefile	/^PROJECT_NAME = tempmux$/;"	m
+REPORT_DIR	Makefile	/^REPORT_DIR = reports   # Directory for reports$/;"	m
+SIM_TIME	Makefile	/^SIM_TIME = --runall # Run simulation until completion$/;"	m
+TESTBENCH	Makefile	/^TESTBENCH = T_TEMPMUX_tb$/;"	m
+TOP_MODULE	Makefile	/^TOP_MODULE = TEMPMUX$/;"	m
+VHDL_EXT	Makefile	/^VHDL_EXT = .vhd$/;"	m
+VHDL_SOURCES	Makefile	/^VHDL_SOURCES = TEMPMUX.vhd T_TEMPMUX_tb.vhd$/;"	m
+WORK_LIB	Makefile	/^WORK_LIB = work # Default work library name$/;"	m
+XELAB	Makefile	/^XELAB = xelab          # Elaborator (links compiled units)$/;"	m
+XSIM	Makefile	/^XSIM = xsim            # Simulator$/;"	m
+XVHDL	Makefile	/^XVHDL = xvhdl          # VHDL compiler$/;"	m
+all	Makefile	/^all: test$/;"	t
+check-tools	Makefile	/^check-tools:$/;"	t
+clean	Makefile	/^clean:$/;"	t
+clean-all	Makefile	/^clean-all: clean$/;"	t
+compile	Makefile	/^compile: setup $(VHDL_SOURCES)$/;"	t
+compile-design	Makefile	/^compile-design: setup $(TOP_MODULE)$(VHDL_EXT)$/;"	t
+compile-parallel	Makefile	/^compile-parallel: setup$/;"	t
+dirs	Makefile	/^dirs:$/;"	t
+elaborate	Makefile	/^elaborate: compile$/;"	t
+help	Makefile	/^help:$/;"	t
+regression	Makefile	/^regression: clean test$/;"	t
+setup	Makefile	/^setup: dirs$/;"	t
+show-vars	Makefile	/^show-vars:$/;"	t
+sim-gui	Makefile	/^sim-gui: elaborate$/;"	t
+sim-quick	Makefile	/^sim-quick:$/;"	t
+simulate	Makefile	/^simulate: elaborate$/;"	t
+status	Makefile	/^status:$/;"	t
+syntax-check	Makefile	/^syntax-check:$/;"	t
+test	Makefile	/^test: compile elaborate simulate$/;"	t
+test-quick	Makefile	/^test-quick: setup$/;"	t
+timing-report	Makefile	/^timing-report: compile$/;"	t
+waveform	Makefile	/^waveform: elaborate$/;"	t
